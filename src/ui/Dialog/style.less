@@ -1,0 +1,76 @@
+@import "~@/utils/styles/index.less";
+
+.main {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  width: 640rpx;
+  transform: translate(0 ,-50%);
+  border-radius: 16rpx;
+  background-color: @white;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1001;
+
+  .content {
+    color: #353535;
+    border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+    font-size: 34rpx;
+    font-weight: @bold;
+    line-height: 48rpx;
+    text-align: center;
+
+    .tip {
+      margin-top: 24rpx;
+      color: @grey-5;
+      font-size: 26rpx;
+      font-weight: @bold;
+      line-height: 36rpx;
+    }
+  }
+
+  .btnWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      flex: 1 1 auto;
+      padding: 32rpx;
+      color: @grey-8;
+      border: none;
+      border-radius: 0;
+      border-left: 2rpx solid rgba(0, 0, 0, 0.1);
+      background-color: @white;
+      font-size: 34rpx;
+      font-weight: @bold;
+      line-height: 48rpx;
+      text-align: center;
+
+      &.highlight {
+        color: @primary-color;
+      }
+
+      &:first-of-type {
+        border-left: none;
+      }
+
+      &:after {
+        border: none;
+      }
+    }
+  }
+
+  .warning {
+    color: @orange-6;
+  }
+}
+
+.closeText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  font-size: 40rpx;
+  color: @blue-6;
+}
