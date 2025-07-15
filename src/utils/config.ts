@@ -9,13 +9,10 @@ import {
 
 import {
   mainPackageRoutes,
-  titlePrefix,
-  mainPackageUrlMap,
-  Pages
+  titlePrefix
 } from '../constants/route'
-import { iconMap as tabBarIconMap } from '../constants/tab-bar'
 
-import { white, black, primaryColor } from './styles/color'
+import { white } from './styles/color'
 
 export function getWechatAppConfig(title?: string): WechatAppConfig {
   const appConfig: WechatAppConfig = {
@@ -32,17 +29,6 @@ export function getWechatAppConfig(title?: string): WechatAppConfig {
       // 小程序问卷反馈 appid
       'wxebadf544ddae62cb'
     ],
-    tabBar: {
-      color: black,
-      selectedColor: primaryColor,
-      backgroundColor: white,
-      borderStyle: 'white',
-      list: [{
-        pagePath: mainPackageUrlMap[Pages.Home],
-        text: '首页',
-        selectedIconPath: tabBarIconMap[Pages.Home].active
-      }]
-    },
     plugins: {
       // "小艾视频播放器"
       'm-video': {

@@ -20,16 +20,9 @@ export const host = must('host', process.env.REMAX_APP_HOST)
 // API Host
 export const apiHost = must('apiHost', process.env.REMAX_APP_API_HOST)
 
-// SSO Host
-export const ssoHost = must('ssoHost', process.env.REMAX_APP_SSO_HOST)
-
 // 运行平台相关常量
 export const platform = must('platform', process.env.REMAX_PLATFORM)
 
-export const publicAssetHost = must('publicAssetHost', process.env.REMAX_APP_PUBLIC_ASSET_HOST)
-
-// 工单小程序 appID（目前只有微信小程序）
-export const supportMpAppID = must('supportMpAppID', process.env.REMAX_APP_SUPPORT_MP_APP_ID)
 
 // TODO: 头条 && 百度 ... platform
 export enum Platform {
@@ -40,10 +33,3 @@ export enum Platform {
 // TODO: 头条 && 百度 ... platform 判断
 export const isWechat = platform === Platform.Wechat
 export const isAli = platform === Platform.Ali
-
-// 信任的小程序app id 列表，可以携带重要数据比如说cookie
-export const appIDWhiteList = must('appIDWhiteList', process.env.REMAX_APP_WECHAT_APP_ID_WHITE_LIST).split(',')
-
-export const portalHost = must('portalHost', process.env.REMAX_APP_PORTAL_HOST)
-export const marketingHost = must('marketingHost', process.env.REMAX_APP_MARKETING_HOST)
-export const cloudMarketUrl = must('cloudMarketUrl', process.env.REMAX_APP_CLOUD_MARKET_URL)
